@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "4defc16e-e9f2-4e51-9806-2280cd7662a2",
+		"name": "tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38536009"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "2|1zBqYN4NK7ATFIdxyCqevvv1GtnvZJfTqRm4Lnf3ada2542f"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "1|V4o57OIcI7pMoknrJ0afXtRWUeSFG66HqoxBlmj4daa52838"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "1|V4o57OIcI7pMoknrJ0afXtRWUeSFG66HqoxBlmj4daa52838"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dni",
+							"value": "76946121",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Tarea 4",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Demo Descripcion",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "1999-02-20",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "pending",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "1|V4o57OIcI7pMoknrJ0afXtRWUeSFG66HqoxBlmj4daa52838"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"dni\": \"75485214\",\r\n    \"title\": \"Tarea 2025\",\r\n    \"description\": \"Descripción de la tarea 1\",\r\n    \"due_date\": \"2024-01-01\",\r\n    \"status\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "1|V4o57OIcI7pMoknrJ0afXtRWUeSFG66HqoxBlmj4daa52838"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/tasks/2"
+			},
+			"response": []
+		}
+	]
+}
